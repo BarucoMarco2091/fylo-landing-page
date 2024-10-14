@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: hsl(217, 28%, 15%);
+  padding-top: 3dvh;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 4dvh 4dvh;
+}
+header nav .flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  gap: 2dvh;
+}
+header nav .flex-container .flex-item {
+  color: hsl(240, 2%, 79%);
+  font-family: "Raleway", serif;
+  font-size: 1rem;
+}
+header #intro {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+  top: 1dvh;
+}
+header #intro .intro-image {
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header #intro .intro-title {
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  font-family: "Raleway", serif;
+  margin-top: 2dvh;
+  margin-bottom: 2dvh;
+}
+header #intro .intro-paragraph {
+  color: hsl(240, 2%, 79%);
+  text-align: center;
+  font-family: "Open Sans", serif;
+  margin-bottom: 2dvh;
+}
+header #intro .intro-button {
+  width: 35dvh;
+  height: 7dvh;
+  border-radius: 5dvh;
+  background-color: hsl(176, 68%, 64%);
+  font-family: "Raleway", serif;
+  margin: 0 auto;
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  border: none;
+}
+header #intro .intro-button:hover {
+  background-color: hsl(198, 60%, 50%);
+}
+header #illustration-intro {
+  position: absolute;
+  top: 67dvh;
+}
+header #illustration-intro .wave-picture {
+  width: 100%;
+}
+
+main {
+  background-color: hsl(218, 28%, 13%);
+}
+main #card-grid-container,
+main .card-grid {
+  padding-top: 5dvh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-left: 15dvh;
+}
+main #card-grid-container .card,
+main .card-grid .card {
+  margin: auto;
+}
+main #card-grid-container .card .card-img,
+main .card-grid .card .card-img {
+  max-width: 100%;
+  height: auto;
+}
+main #card-grid-container .card .card-title,
+main .card-grid .card .card-title {
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  font-family: "Open Sans", serif;
+  margin-top: 2dvh;
+}
+main #card-grid-container .card .card-paragraph,
+main .card-grid .card .card-paragraph {
+  margin-top: 2dvh;
+  text-align: center;
+  font-family: "Open Sans", serif;
+  color: hsl(240, 2%, 79%);
+}
+main #container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5dvh;
+  margin-bottom: 20dvh;
+}
+main #container #container-image {
+  flex: 1;
+}
+main #container #container-text {
+  flex: 1;
+  position: relative;
+  top: 20dvh;
+}
+main #container #container-text .container-title {
+  font-family: "Raleway", serif;
+  margin-bottom: 2dvh;
+  color: hsl(0, 0%, 100%);
+}
+main #container #container-text .container-paragraph {
+  font-family: "Open Sans", serif;
+  color: hsl(240, 2%, 79%);
+}
+main #testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 25dvh;
+}
+main #testimonials .testimonials-card {
+  background-color: hsl(219, 30%, 18%);
+  margin-right: 5dvh;
+  margin-left: 2dvh;
+}
+main #testimonials .testimonials-card .testimonials-paragraph {
+  color: hsl(240, 2%, 79%);
+  margin-top: 3dvh;
+  margin-left: 3dvh;
+  font-family: "Open Sans", serif;
+}
+main #testimonials .testimonials-card .testimonials-img {
+  border-radius: 50%;
+  width: 15%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 3dvh;
+  margin-left: 3dvh;
+}
+main #testimonials .testimonials-card .testimonials-name {
+  color: hsl(0, 0%, 100%);
+  font-family: "Open Sans", serif;
+  margin-top: 2dvh;
+  margin-left: 3dvh;
+}
+main #testimonials .testimonials-card .testimonials-description {
+  color: hsl(240, 2%, 79%);
+  font-family: "Open Sans", serif;
+  margin-top: 0.5dvh;
+  margin-left: 3dvh;
+  margin-bottom: 2dvh;
+  font-size: 0.75rem;
+}
+main #form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 10dvh;
+  left: 50dvh;
+  width: 120dvh;
+  height: 40dvh;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(218, 28%, 13%);
+}
+main #form #description .description-title {
+  color: hsl(0, 0%, 100%);
+  margin-top: 3dvh;
+  margin-bottom: 3dvh;
+  text-align: center;
+  font-family: "Open Sans", serif;
+}
+main #form #description .description-paragraph {
+  color: hsl(240, 2%, 79%);
+  text-align: center;
+  margin-bottom: 3dvh;
+}
+main #form #email-box #email {
+  height: 6dvh;
+  width: 50dvh;
+  border-radius: 5dvh;
+}
+main #form #email-box #email::-moz-placeholder {
+  padding-left: 2dvh;
+  font-family: "Open Sans", serif;
+}
+main #form #email-box #email::placeholder {
+  padding-left: 2dvh;
+  font-family: "Open Sans", serif;
+}
+main #form #email-box .submit-button {
+  margin-left: 2dvh;
+  height: 6dvh;
+  width: 25dvh;
+  border-radius: 5dvh;
+  background-color: hsl(176, 68%, 64%);
+  border: none;
+  cursor: pointer;
+  font-family: "Open Sans", serif;
+  color: hsl(0, 0%, 100%);
+}
+main #form #email-box .submit-button:hover {
+  background-color: hsl(198, 60%, 50%);
+}
+
+footer {
+  padding-top: 20dvh;
+  background-color: hsl(216, 53%, 9%);
+}/*# sourceMappingURL=styles.css.map */

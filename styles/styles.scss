@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+// Primary
+$darkBlue: hsl(217, 28%, 15%);
+$darkBlueMain: hsl(218, 28%, 13%);
+$darkBlueFooter: hsl(216, 53%, 9%);
+$darkBlueTestimonials: hsl(219, 30%, 18%);
+
+// Accent
+$cyan: hsl(176, 68%, 64%);
+$blue: hsl(198, 60%, 50%);
+$lightRed: hsl(0, 100%, 63%);
+$grayishBlue: hsl(240, 2%, 79%);
+
+// Neutral
+$white: hsl(0, 0%, 100%);
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: $darkBlue;
+    padding-top: 3dvh;
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 4dvh 4dvh;
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            list-style-type: none;
+            gap: 2dvh;
+
+            .flex-item {
+                color: $grayishBlue;
+                font-family: 'Raleway', serif;
+                font-size: 1rem;
+            }
+        }
+    }
+
+    #intro {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 50%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 3;
+        top: 1dvh;
+
+        .intro-image {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .intro-title {
+            color: $white;
+            text-align: center;
+            font-family: 'Raleway', serif;
+            margin-top: 2dvh;
+            margin-bottom: 2dvh;
+        }
+
+        .intro-paragraph {
+            color: $grayishBlue;
+            text-align: center;
+            font-family: 'Open Sans', serif;
+            margin-bottom: 2dvh;
+        }
+
+        .intro-button {
+            width: 35dvh;
+            height: 7dvh;
+            border-radius: 5dvh;
+            background-color: $cyan;
+            font-family: 'Raleway', serif;
+            margin: 0 auto;
+            color: $white;
+            cursor: pointer;
+            border: none;
+        }
+
+        .intro-button:hover {
+            background-color: $blue;
+        }
+    }
+
+    #illustration-intro {
+        position: absolute;
+        top: 67dvh;
+
+        .wave-picture {
+            width: 100%;
+        }
+    }
+}
+
+main {
+    background-color: $darkBlueMain;
+
+    #card-grid-container,
+    .card-grid {
+        padding-top: 5dvh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-left: 15dvh;
+
+        .card {
+            margin: auto;
+
+            .card-img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .card-title {
+                color: $white;
+                text-align: center;
+                font-family: 'Open Sans', serif;
+                margin-top: 2dvh;
+            }
+
+            .card-paragraph {
+                margin-top: 2dvh;
+                text-align: center;
+                font-family: 'Open Sans', serif;
+                color: $grayishBlue;
+            }
+        }
+    }
+
+    #container {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 5dvh;
+        margin-bottom: 20dvh;
+
+        #container-image {
+            flex: 1;
+        }
+
+        #container-text {
+            flex: 1;
+            position: relative;
+            top: 20dvh;
+
+            .container-title {
+                font-family: 'Raleway', serif;
+                margin-bottom: 2dvh;
+                color: $white;
+            }
+
+            .container-paragraph {
+                font-family: 'Open Sans', serif;
+                color: $grayishBlue;
+            }
+        }
+    }
+
+    #testimonials {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 25dvh;
+
+        .testimonials-card {
+            background-color: $darkBlueTestimonials;
+            margin-right: 5dvh;
+            margin-left: 2dvh;
+
+            .testimonials-paragraph {
+                color: $grayishBlue;
+                margin-top: 3dvh;
+                margin-left: 3dvh;
+                font-family: 'Open Sans', serif;
+            }
+
+            .testimonials-img {
+                border-radius: 50%;
+                width: 15%;
+                object-fit: cover;
+                margin-top: 3dvh;
+                margin-left: 3dvh;
+            }
+
+            .testimonials-name {
+                color: $white;
+                font-family: 'Open Sans', serif;
+                margin-top: 2dvh;
+                margin-left: 3dvh;
+            }
+
+            .testimonials-description {
+                color: $grayishBlue;
+                font-family: 'Open Sans', serif;
+                margin-top: 0.5dvh;
+                margin-left: 3dvh;
+                margin-bottom: 2dvh;
+                font-size: 0.75rem;
+            }
+        }
+    }
+
+    #form {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 10dvh;
+        left: 50dvh;
+        width: 120dvh;
+        height: 40dvh;
+        justify-content: center;
+        align-items: center;
+        background-color: $darkBlueMain;
+
+        #description {
+
+            .description-title {
+                color: $white;
+                margin-top: 3dvh;
+                margin-bottom: 3dvh;
+                text-align: center;
+                font-family: 'Open Sans', serif;
+            }
+
+            .description-paragraph {
+                color: $grayishBlue;
+                text-align: center;
+                margin-bottom: 3dvh;
+            }
+        }
+
+        #email-box {
+
+            #email {
+                height: 6dvh;
+                width: 50dvh;
+                border-radius: 5dvh;
+            }
+
+            #email::placeholder {
+                padding-left: 2dvh;
+                font-family: 'Open Sans', serif;
+            }
+
+            .submit-button {
+                margin-left: 2dvh;
+                height: 6dvh;
+                width: 25dvh;
+                border-radius: 5dvh;
+                background-color: $cyan;
+                border: none;
+                cursor: pointer;
+                font-family: 'Open Sans', serif;
+                color: $white;
+            }
+
+            .submit-button:hover {
+                background-color: $blue;
+            }
+        }
+    }
+}
+
+footer {
+    padding-top: 20dvh;
+    background-color: $darkBlueFooter;
+}
