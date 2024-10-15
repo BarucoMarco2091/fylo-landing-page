@@ -39,6 +39,15 @@ header #intro {
   z-index: 3;
   top: 1dvh;
 }
+@media screen and (max-width: 480px) {
+  header #intro {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+  }
+}
 header #intro .intro-image {
   max-width: 100%;
   height: auto;
@@ -76,6 +85,11 @@ header #illustration-intro {
   position: absolute;
   top: 67dvh;
 }
+@media screen and (max-width: 480px) {
+  header #illustration-intro {
+    display: none;
+  }
+}
 header #illustration-intro .wave-picture {
   width: 100%;
 }
@@ -90,6 +104,15 @@ main .card-grid {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   margin-left: 15dvh;
+}
+@media screen and (max-width: 480px) {
+  main #card-grid-container,
+  main .card-grid {
+    padding-top: 1dvh;
+    margin-left: 1dvh;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 main #card-grid-container .card,
 main .card-grid .card {
@@ -120,13 +143,33 @@ main #container {
   margin: 5dvh;
   margin-bottom: 20dvh;
 }
+@media screen and (max-width: 480px) {
+  main #container {
+    display: flex;
+    flex-direction: column;
+    margin: 1dvh;
+    margin-bottom: 1dvh;
+  }
+}
 main #container #container-image {
   flex: 1;
+}
+main #container #container-image .container-picture {
+  max-width: 100%;
+  height: auto;
 }
 main #container #container-text {
   flex: 1;
   position: relative;
   top: 20dvh;
+}
+@media screen and (max-width: 480px) {
+  main #container #container-text {
+    position: relative;
+    top: 1dvh;
+    text-align: center;
+    margin: 1dvh;
+  }
 }
 main #container #container-text .container-title {
   font-family: "Raleway", serif;
@@ -141,6 +184,15 @@ main #testimonials {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin-bottom: 25dvh;
+}
+@media screen and (max-width: 480px) {
+  main #testimonials {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 1dvh;
+    padding: 1dvh;
+    gap: 1dvh;
+  }
 }
 main #testimonials .testimonials-card {
   background-color: hsl(219, 30%, 18%);
@@ -187,6 +239,19 @@ main #form {
   align-items: center;
   background-color: hsl(218, 28%, 13%);
 }
+@media screen and (max-width: 480px) {
+  main #form {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    margin: auto;
+    padding: 1dvh;
+  }
+}
 main #form #description .description-title {
   color: hsl(0, 0%, 100%);
   margin-top: 3dvh;
@@ -203,6 +268,12 @@ main #form #email-box #email {
   height: 6dvh;
   width: 50dvh;
   border-radius: 5dvh;
+  border: none;
+}
+@media screen and (max-width: 480px) {
+  main #form #email-box #email {
+    margin-bottom: 2dvh;
+  }
 }
 main #form #email-box #email::-moz-placeholder {
   padding-left: 2dvh;
@@ -223,6 +294,16 @@ main #form #email-box .submit-button {
   font-family: "Open Sans", serif;
   color: hsl(0, 0%, 100%);
 }
+@media screen and (max-width: 480px) {
+  main #form #email-box .submit-button {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-bottom: 1dvh;
+  }
+}
 main #form #email-box .submit-button:hover {
   background-color: hsl(198, 60%, 50%);
 }
@@ -230,4 +311,6 @@ main #form #email-box .submit-button:hover {
 footer {
   padding-top: 20dvh;
   background-color: hsl(216, 53%, 9%);
+  text-align: center;
+  width: 100%;
 }/*# sourceMappingURL=styles.css.map */

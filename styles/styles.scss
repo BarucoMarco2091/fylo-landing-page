@@ -58,6 +58,14 @@ header {
         z-index: 3;
         top: 1dvh;
 
+        @media screen and (max-width:480px) {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            text-align: center;
+            justify-content: center;
+        }
+
         .intro-image {
             max-width: 100%;
             height: auto;
@@ -100,6 +108,10 @@ header {
         position: absolute;
         top: 67dvh;
 
+        @media screen and (max-width:480px) {
+            display: none;
+        }
+
         .wave-picture {
             width: 100%;
         }
@@ -116,6 +128,13 @@ main {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
         margin-left: 15dvh;
+
+        @media screen and (max-width:480px) {
+            padding-top: 1dvh;
+            margin-left: 1dvh;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+        }
 
         .card {
             margin: auto;
@@ -147,14 +166,33 @@ main {
         margin: 5dvh;
         margin-bottom: 20dvh;
 
+        @media screen and (max-width: 480px) {
+            display: flex;
+            flex-direction: column;
+            margin: 1dvh;
+            margin-bottom: 1dvh;
+        }
+
         #container-image {
             flex: 1;
+
+            .container-picture {
+                max-width: 100%;
+                height: auto;
+            }
         }
 
         #container-text {
             flex: 1;
             position: relative;
             top: 20dvh;
+
+            @media screen and (max-width:480px) {
+                position: relative;
+                top: 1dvh;
+                text-align: center;
+                margin: 1dvh;
+            }
 
             .container-title {
                 font-family: 'Raleway', serif;
@@ -173,6 +211,14 @@ main {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         margin-bottom: 25dvh;
+
+        @media screen and (max-width: 480px) {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            margin: 1dvh;
+            padding: 1dvh;
+            gap: 1dvh;
+        }
 
         .testimonials-card {
             background-color: $darkBlueTestimonials;
@@ -224,6 +270,18 @@ main {
         align-items: center;
         background-color: $darkBlueMain;
 
+        @media screen and (max-width: 480px) {
+            display: flex;
+            flex-direction: column;
+            position: static;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            height: auto;
+            margin: auto;
+            padding: 1dvh;
+        }
+
         #description {
 
             .description-title {
@@ -247,6 +305,11 @@ main {
                 height: 6dvh;
                 width: 50dvh;
                 border-radius: 5dvh;
+                border: none;
+
+                @media screen and (max-width: 480px) {
+                    margin-bottom: 2dvh;
+                }
             }
 
             #email::placeholder {
@@ -264,6 +327,15 @@ main {
                 cursor: pointer;
                 font-family: 'Open Sans', serif;
                 color: $white;
+
+                @media screen and (max-width: 480px) {
+                    display: flex;
+                    text-align: center;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0 auto;
+                    padding-bottom: 1dvh;
+                }
             }
 
             .submit-button:hover {
@@ -276,4 +348,6 @@ main {
 footer {
     padding-top: 20dvh;
     background-color: $darkBlueFooter;
+    text-align: center;
+    width: 100%;
 }
